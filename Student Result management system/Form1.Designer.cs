@@ -29,11 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Student_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Last_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.English = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mathematics = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Computer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Achievement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,14 +68,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Student_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Last_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.English = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mathematics = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Computer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Achievement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -80,14 +80,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeight = 35;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -99,34 +99,90 @@
             this.Computer,
             this.Total_Score,
             this.Achievement});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
             this.dataGridView1.Location = new System.Drawing.Point(45, 689);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 8, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.RowHeadersWidth = 110;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.Size = new System.Drawing.Size(1832, 300);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Student_ID
+            // 
+            this.Student_ID.HeaderText = "Student_ID";
+            this.Student_ID.MinimumWidth = 6;
+            this.Student_ID.Name = "Student_ID";
+            this.Student_ID.ToolTipText = "Student_ID";
+            // 
+            // First_Name
+            // 
+            this.First_Name.HeaderText = "First_Name";
+            this.First_Name.MinimumWidth = 6;
+            this.First_Name.Name = "First_Name";
+            this.First_Name.ToolTipText = "First_Name";
+            // 
+            // Last_Name
+            // 
+            this.Last_Name.HeaderText = "Last_Name";
+            this.Last_Name.MinimumWidth = 6;
+            this.Last_Name.Name = "Last_Name";
+            this.Last_Name.ToolTipText = "Last_Name";
+            // 
+            // English
+            // 
+            this.English.HeaderText = "English";
+            this.English.MinimumWidth = 6;
+            this.English.Name = "English";
+            this.English.ToolTipText = "English";
+            // 
+            // Mathematics
+            // 
+            this.Mathematics.HeaderText = "Mathematics";
+            this.Mathematics.MinimumWidth = 6;
+            this.Mathematics.Name = "Mathematics";
+            this.Mathematics.ToolTipText = "Mathematics";
+            // 
+            // Computer
+            // 
+            this.Computer.HeaderText = "Computer";
+            this.Computer.MinimumWidth = 6;
+            this.Computer.Name = "Computer";
+            this.Computer.ToolTipText = "Computer";
+            // 
+            // Total_Score
+            // 
+            this.Total_Score.HeaderText = "Total_Score";
+            this.Total_Score.MinimumWidth = 6;
+            this.Total_Score.Name = "Total_Score";
+            this.Total_Score.ToolTipText = "Total_Score";
+            // 
+            // Achievement
+            // 
+            this.Achievement.HeaderText = "Achievement";
+            this.Achievement.MinimumWidth = 6;
+            this.Achievement.Name = "Achievement";
+            this.Achievement.ToolTipText = "Achievement";
             // 
             // textBox3
             // 
@@ -313,6 +369,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(283, 41);
             this.textBox9.TabIndex = 1;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label10
             // 
@@ -428,66 +485,10 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // Student_ID
-            // 
-            this.Student_ID.HeaderText = "Student_ID";
-            this.Student_ID.MinimumWidth = 6;
-            this.Student_ID.Name = "Student_ID";
-            this.Student_ID.ToolTipText = "Student_ID";
-            // 
-            // First_Name
-            // 
-            this.First_Name.HeaderText = "First_Name";
-            this.First_Name.MinimumWidth = 6;
-            this.First_Name.Name = "First_Name";
-            this.First_Name.ToolTipText = "First_Name";
-            // 
-            // Last_Name
-            // 
-            this.Last_Name.HeaderText = "Last_Name";
-            this.Last_Name.MinimumWidth = 6;
-            this.Last_Name.Name = "Last_Name";
-            this.Last_Name.ToolTipText = "Last_Name";
-            // 
-            // English
-            // 
-            this.English.HeaderText = "English";
-            this.English.MinimumWidth = 6;
-            this.English.Name = "English";
-            this.English.ToolTipText = "English";
-            // 
-            // Mathematics
-            // 
-            this.Mathematics.HeaderText = "Mathematics";
-            this.Mathematics.MinimumWidth = 6;
-            this.Mathematics.Name = "Mathematics";
-            this.Mathematics.ToolTipText = "Mathematics";
-            // 
-            // Computer
-            // 
-            this.Computer.HeaderText = "Computer";
-            this.Computer.MinimumWidth = 6;
-            this.Computer.Name = "Computer";
-            this.Computer.ToolTipText = "Computer";
-            // 
-            // Total_Score
-            // 
-            this.Total_Score.HeaderText = "Total_Score";
-            this.Total_Score.MinimumWidth = 6;
-            this.Total_Score.Name = "Total_Score";
-            this.Total_Score.ToolTipText = "Total_Score";
-            // 
-            // Achievement
-            // 
-            this.Achievement.HeaderText = "Achievement";
-            this.Achievement.MinimumWidth = 6;
-            this.Achievement.Name = "Achievement";
-            this.Achievement.ToolTipText = "Achievement";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label5.BackColor = System.Drawing.Color.DeepPink;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(346, 622);

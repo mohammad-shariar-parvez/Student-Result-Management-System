@@ -106,6 +106,8 @@ namespace Student_Result_management_system
 
             R[3] = R[0] + R[1] + R[2];
             //R[4] = (R[3] / 3);
+            string[] subject = new string[] { textBox8.Text, textBox9.Text, textBox10.Text };
+
 
             //string av = Convert.ToString(R[4]);
             string Tt = Convert.ToString(R[3]);
@@ -114,23 +116,36 @@ namespace Student_Result_management_system
             //textBox12.Text = av;
 
             if (R[0]<60 |  R[1]<60 | R[2]<60)
+
             {
                 textBox22.Text = textBox2.Text+" " + textBox3.Text;
-                if (R[0] < 60)
+                for (int i = 0; i < subject.Length; i++)
                 {
-                    textBox21.Text = textBox21.Text + " "+ "English,";
-                }
-                if (R[1] < 60)
-                {
-                    textBox21.Text = textBox21.Text + " " + "Mathematics,";
-                }
-                if (R[2] < 60)
-                {
-                    textBox21.Text = textBox21.Text + " " + "Computer,";
+                    if (Convert.ToDouble(subject[i]) < 60 & i==0 )
+                    {
+
+                        textBox21.Text = textBox21.Text + " " + "English,";
+                    }
+                    else if (Convert.ToDouble(subject[i]) < 60 & i == 1)
+                    {
+
+                        textBox21.Text = textBox21.Text + " " + "Mathematics,";
+                    }
+                    else if (Convert.ToDouble(subject[i]) < 60 & i == 2)
+                    {
+
+                        textBox21.Text = textBox21.Text + " " + "Computer,";
+                    }
+
+
                 }
 
             }
-             if(R[0]>=80 & R[1] >= 80 & R[2] >= 80 & R[3] >= 260)
+
+
+
+            
+             else if(R[0]>=80 & R[1] >= 80 & R[2] >= 80 & R[3] >= 260)
 
             {
                 dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text,  textBox8.Text,
@@ -265,6 +280,11 @@ namespace Student_Result_management_system
         }
 
         private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }
